@@ -1,7 +1,7 @@
 name: optimized_image_loader
-description: A new Flutter project.
+description: Open source dart package for loading network images efficiently, having control of all possibilities while image is loading and after loading
 version: 0.0.1
-homepage:
+homepage: https://github.com/Daniel-Sogbey/optimized_image_loader
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  loading_indicator: ^3.1.0
 
 dev_dependencies:
   flutter_test:
