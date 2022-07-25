@@ -3,24 +3,24 @@ library optimized_image_loader;
 import 'package:flutter/material.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 
-class ImageLoader extends StatelessWidget {
+class OptimizedImageLoader extends StatelessWidget {
   final String url;
   final double imageHeight;
   final double imageWidth;
   final double spinnerHeight;
   final double spinnerWidth;
-  final Indicator loadingSpinnerIndicatorType;
+  Indicator? loadingSpinnerIndicatorType;
   final List<Color>? loadingSpinnerColors;
   Decoration? errorContainerDecoration;
 
-  ImageLoader({
+  OptimizedImageLoader({
     Key? key,
     required this.url,
     required this.imageHeight,
     required this.imageWidth,
     required this.spinnerHeight,
     required this.spinnerWidth,
-  required this.loadingSpinnerIndicatorType,
+  this.loadingSpinnerIndicatorType,
   required this.loadingSpinnerColors,
   this.errorContainerDecoration,
   }) : super(key: key);
@@ -41,7 +41,7 @@ class ImageLoader extends StatelessWidget {
             height: spinnerHeight,
             margin: const EdgeInsets.all(10.0),
             child: LoadingIndicator(
-              indicatorType: loadingSpinnerIndicatorType,
+              indicatorType:loadingSpinnerIndicatorType != null? loadingSpinnerIndicatorType! : Indicator.lineSpinFadeLoader,
               colors: loadingSpinnerColors,
             ),
           ),
@@ -49,6 +49,7 @@ class ImageLoader extends StatelessWidget {
       },
       errorBuilder:
           (BuildContext context, Object exception, StackTrace? stackTrace) {
+        debugPrint("StackTrace $stackTrace");
         return Container(
           height: imageHeight,
           width: imageWidth,
