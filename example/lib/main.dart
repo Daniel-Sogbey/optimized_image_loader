@@ -73,17 +73,12 @@ class _MyHomePageState extends State<MyHomePage> {
             spinnerHeight: 25,
             spinnerWidth: 25,
             loadingSpinnerColors: const [Colors.blue],
-            // loadingSpinnerIndicatorType: ,
             errorContainerDecoration: BoxDecoration(
               color: Colors.orange,
               borderRadius: BorderRadius.circular(5)
             ),
           ),
-          // Image.network(
-          //   gig.user['profile_pic']['url'],
-          //   width: 40,
-          //   fit: BoxFit.contain,
-          // ),
+
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
