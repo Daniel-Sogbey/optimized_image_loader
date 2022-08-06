@@ -8,9 +8,9 @@ network change states handled out of the box.
 Recommended package to use as a loading indicator when fetching a network image is
 the loading_indicator package. Link below
 
-- [loading_indicator package url](https://pub.dev/packages/loading_indicator)
+- [loading_indicator package](https://pub.dev/packages/loading_indicator)
 
-## New to Flutter? Use the resourses below
+## New to Flutter ? Use the resourses below
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)

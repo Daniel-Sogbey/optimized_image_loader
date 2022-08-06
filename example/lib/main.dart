@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loading_indicator/loading_indicator.dart';
 import 'package:optimized_image_loader/optimized_image_loader.dart';
 
 void main() {
@@ -66,19 +67,26 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: ClipRRect(
           borderRadius: BorderRadius.circular(5),
-          child: OptimizedImageLoader(
-            url: "https://tinypng.com/images/social/developer-api.jpg",
-            imageHeight: 100,
-            imageWidth: 100,
-            spinnerHeight: 25,
-            spinnerWidth: 25,
-            loadingSpinnerColors: const [Colors.blue],
-            errorContainerDecoration: BoxDecoration(
-              color: Colors.orange,
-              borderRadius: BorderRadius.circular(5)
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.blue)
+            ),
+            child: OptimizedImageLoader(
+              url: "https://tinypng.com/images/social/developer-api.jpg",
+              imageHeight: 100,
+              imageWidth: 100,
+              spinnerHeight: 25,
+              spinnerWidth: 25,
+              loadingIndicator: const LoadingIndicator(
+                indicatorType: Indicator.lineSpinFadeLoader,
+              ),
+              errorContainerDecoration: BoxDecoration(
+                color: Colors.orange,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              errorContainerChild: Image.asset("images/404.png"),
             ),
           ),
-
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.

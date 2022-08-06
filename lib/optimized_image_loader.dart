@@ -9,9 +9,9 @@ class OptimizedImageLoader extends StatelessWidget {
   final double imageWidth;
   final double spinnerHeight;
   final double spinnerWidth;
-  Indicator? loadingSpinnerIndicatorType;
-  final List<Color>? loadingSpinnerColors;
+  final Widget loadingIndicator;
   Decoration? errorContainerDecoration;
+  Widget? errorContainerChild;
 
   OptimizedImageLoader({
     Key? key,
@@ -20,9 +20,9 @@ class OptimizedImageLoader extends StatelessWidget {
     required this.imageWidth,
     required this.spinnerHeight,
     required this.spinnerWidth,
-  this.loadingSpinnerIndicatorType,
-  required this.loadingSpinnerColors,
-  this.errorContainerDecoration,
+    required this.loadingIndicator,
+    this.errorContainerDecoration,
+    this.errorContainerChild,
   }) : super(key: key);
 
   @override
@@ -40,10 +40,7 @@ class OptimizedImageLoader extends StatelessWidget {
             width: spinnerWidth,
             height: spinnerHeight,
             margin: const EdgeInsets.all(10.0),
-            child: LoadingIndicator(
-              indicatorType:loadingSpinnerIndicatorType != null? loadingSpinnerIndicatorType! : Indicator.lineSpinFadeLoader,
-              colors: loadingSpinnerColors,
-            ),
+            child: loadingIndicator,
           ),
         );
       },
@@ -54,6 +51,7 @@ class OptimizedImageLoader extends StatelessWidget {
           height: imageHeight,
           width: imageWidth,
           decoration: errorContainerDecoration,
+          child: errorContainerChild,
         );
       },
     );
