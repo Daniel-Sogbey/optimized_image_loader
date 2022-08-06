@@ -1,6 +1,6 @@
 name: optimized_image_loader
 description: Open source dart package for loading network images efficiently, having control of all possibilities while image is loading and after loading
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/Daniel-Sogbey/optimized_image_loader
 
 environment:
