@@ -1,12 +1,8 @@
 ## Optimized Image Loader
 
-<!-- ![alt text](https://github.com/Daniel-Sogbey/optimized_image_loader/blob/master/images/Screenshot_20220804_003148.png?raw=true) -->
-<img src="https://github.com/Daniel-Sogbey/optimized_image_loader/blob/master/images/Screenshot_20220804_003148.png?raw=true" width="500" height="500"/>
-<img src="https://github.com/Daniel-Sogbey/optimized_image_loader/blob/master/images/Screenshot_20220804_003044.png?raw=true" width="500" height="500"/>
+![alt text](https://github.com/Daniel-Sogbey/optimized_image_loader/blob/master/images/Screenshot_20220804_003148.png?raw=true)
+<img src="https://github.com/Daniel-Sogbey/optimized_image_loader/blob/master/images/Screenshot_20220804_003044.png?raw=true" width=200/>
 
-Loading image             |  Image Loaded
-:-------------------------:|:-------------------------:
-<img src="https://github.com/Daniel-Sogbey/optimized_image_loader/blob/master/images/Screenshot_20220804_003148.png?raw=true" width="500" height="500"/>  |  <img src="https://github.com/Daniel-Sogbey/optimized_image_loader/blob/master/images/Screenshot_20220804_003044.png?raw=true" width="500" height="500"/>
 
 
 A Flutter package to help you easily load network images and having,
